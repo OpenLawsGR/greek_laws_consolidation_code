@@ -4,12 +4,14 @@ This repository contains the source code in Python of a semi-automatic system fo
 ## Dependencies
 This code has been tested with Python 2.7. Many modules depend on Python's lxml API (see [lxml](http://lxml.de/tutorial.html)) and Natural Language Toolkit (see [nltk](http://www.nltk.org/api/nltk.html)). [pdftotext](https://linux.die.net/man/1/pdftotext) is also needed.
 
+## Important Note
+**Before each step make sure that src and text_dest variables in the respective .py file are set**
+
 ## STEP 1
 See the tutorial of ultraclarity-crawler [here](https://github.com/OpenLawsGR/ultraclarity-crawler) for downloading PDF files of the Government Gazzette.
 
 ## STEP 2
 pdftotext is used to transform PDF files to plain text documents. The utility has several problems when used in PDF files containing scanned images (laws mainly published before 2004).
-Inside pdftotext.py change variables "src", "text_dest" and "rules_file" accordingly and run the command below from terminal
 > python pdfotext.py
 
 ## STEP 3
@@ -27,7 +29,7 @@ To run this module in terminal type:
 
 Before moving to steps 6 and 7 an extra step of Validation and Manual Editing is necessary. Law texts may contain grammar or syntax errors and misprints. Moreover, rules and patterns are not always followed by law makers. All text files that contain valid laws (2004-2015 period) are listed in valid_text_laws.txt.
 
-## STEP 6 and 7
+## STEPS 6 and 7
 Use *implement_mod.py* to automatically apply all modifications found in the XML files of the laws. Non-valid xml files are ignored. In this last step the appropriate XSL transformations are applied to the XML files that represent laws revisions in order to generate user friendly text versions of them. Before using this module it is necessary to initialize 2 git repository and declare them at the beginning of the script. 
 To run this module in terminal type:
 > python implement_mod.py
