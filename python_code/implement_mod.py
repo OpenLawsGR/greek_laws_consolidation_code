@@ -28,7 +28,8 @@ ALL VALID XML LAWS FILES are stored in a folder named (valid_xml_laws)
 src = '/path/to/valid/xml/laws'
 
 #Path to XSL file
-xls_src = '/path/to/XSL/file'
+#xls_src = '/path/to/XSL/file'
+xls_src = 'laws.xsl'
 
 #Repository of XML files revisions (A user defined git folder
 #for storing XML Laws revisions
