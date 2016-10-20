@@ -28,8 +28,8 @@ text_dest = '/path/to/destination/'
 
 #PDF files between 2000-2005 provide no encoding information
 #so this file is necessary for character mapping
-rules_file = '/path/to/characters/replacement/file'
-
+#rules_file = '/path/to/characters/replacement/file'
+rules_file = 'replacements.txt'
 
 if not os.path.exists(os.path.join(text_dest, year)):
     os.makedirs(os.path.join(text_dest, year))
