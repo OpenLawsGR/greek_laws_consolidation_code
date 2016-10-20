@@ -25,7 +25,7 @@ This step implements structural analysis and produces xml files from the txt fil
 To run this module in terminal type:
 > python create_xml_with_mod.py
 
-Before moving to steps 6 and 7 an extra step of Validation and Manual Editing is necessary. Law texts may contain grammar or syntax errors and misprints. Moreover, rules and patterns are not always followed by law makers. Due to the nature of these errors and because manual editing is a challenging and mentally demanding task all text files that contain valid laws can be found at *valid_xml* folder.
+Before moving to steps 6 and 7 an extra step of Validation and Manual Editing is necessary. Law texts may contain grammar or syntax errors and misprints. Moreover, rules and patterns are not always followed by law makers. All text files that contain valid laws (2004-2015 period) are listed in valid_text_laws.txt.
 
 ## STEP 6 and 7
 Use *implement_mod.py* to automatically apply all modifications found in the XML files of the laws. Non-valid xml files are ignored. In this last step the appropriate XSL transformations are applied to the XML files that represent laws revisions in order to generate user friendly text versions of them. Before using this module it is necessary to initialize 2 git repository and declare them at the beginning of the script. 
