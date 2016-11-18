@@ -31,10 +31,6 @@ text_dest = '/path/to/destination/'
 #rules_file = '/path/to/characters/replacement/file'
 rules_file = 'replacements.txt'
 
-if not os.path.exists(os.path.join(text_dest, year)):
-    os.makedirs(os.path.join(text_dest, year))
-
-
 def replace_all(text, dic):
     '''
     Replaces the characters of a text according to a dictionary
@@ -69,6 +65,10 @@ if __name__ == '__main__':
         for name in files:
             if name.endswith('.txt'):
                 year = name.split("_")[2].replace('.txt', '')
+                
+                if not os.path.exists(os.path.join(text_dest, year)):
+                    os.makedirs(os.path.join(text_dest, year))
+
                 shutil.move(os.path.join(root,name), os.path.join(text_dest, year))
 
     #Files between 2000-2005 have wrong character encoding
